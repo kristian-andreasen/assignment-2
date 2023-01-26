@@ -1,0 +1,12 @@
+3252
+
+local state: data that belongs to a particular component where it was declared in
+
+3708
+
+4006 - routing
+
+1:04:40
+
+1:14:46
+function with no logic is a presen
