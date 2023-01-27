@@ -25,7 +25,7 @@ function Profile() {
 
   return (
     <>
-      <h1>Profile</h1>
+      <div class="header-line"></div>¨<h1>Profile</h1>
       <ProfileHeader username={user.username} />
       <ProfileActions />
       <ProfileTranslationsHistory translations={user.translations} />

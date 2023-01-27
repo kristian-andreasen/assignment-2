@@ -1,9 +1,3 @@
-/* ProfileActions.css */
-.profile-actions {
-  display: flex;
-  justify-content: space-between;
-}
-
 .profile-actions ul {
   list-style: none;
   display: flex;
@@ -14,13 +8,8 @@
 }
 
 .profile-actions button {
-  background-color: #4caf50; /* Green */
-  border: none;
-  color: white;
-  padding: 10px 20px;
+
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
   font-size: 16px;
   cursor: pointer;
 }

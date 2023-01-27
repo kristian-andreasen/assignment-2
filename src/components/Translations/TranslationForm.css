@@ -7,6 +7,15 @@
   /*background: #423142;*/
 }
 
+.icon {
+  height: 27px;
+  padding: 5px;
+  width: 11%;
+  float: left;
+  color: #847384;
+  background: #dedede;
+  text-align: center;
+}
 .translation-input {
   letter-spacing: 0.3px;
   font-size: 13px;
@@ -27,4 +36,21 @@
   border-bottom-right-radius: 3px;
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
+}
+
+.translate-btn {
+  color: #fff;
+  /* float: right; */
+  height: 37px;
+  border: none;
+  background: #ad6bad;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  padding: 0px 0px;
+  cursor: pointer;
+  position: absolute;
 }

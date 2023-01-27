@@ -68,50 +68,53 @@ const LoginForm = () => {
   return (
     <>
       <form onSubmit={handleSubmit(onSubmit)} class="loginForm">
-        <fieldset>
-          <svg
-            width="40"
-            height="40"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className="icon"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
-            />
-          </svg>
-
-          <input
-            type="text"
-            placeholder="What your name?"
-            {...register('username', usernameConfig)}
-            class="username-input"
-          />
-          <button type="submit" disabled={loading} class="login">
+        <div class="login-container">
+          <fieldset>
             <svg
+              width="40"
+              height="40"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="w-6 h-6"
+              className="icon"
             >
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
               />
             </svg>
-          </button>
-          {/*(errors.username && errors.username.type === 'required') && <span>Username is required</span>*/}
-          {/*(errors.username && errors.username.type === 'minLength') && <span>Username is too short (min. 2 characters)</span>*/}
-          {errorMessage}
-        </fieldset>
+
+            <input
+              type="text"
+              placeholder="What your name?"
+              {...register('username', usernameConfig)}
+              class="username-input"
+            />
+            <button type="submit" disabled={loading} class="login">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+            </button>
+            {/*(errors.username && errors.username.type === 'required') && <span>Username is required</span>*/}
+            {/*(errors.username && errors.username.type === 'minLength') && <span>Username is too short (min. 2 characters)</span>*/}
+            {errorMessage}
+          </fieldset>
+        </div>
+
         {loading && <p>logging in...</p>}
         {apiError && <p>{apiError}</p>}
       </form>

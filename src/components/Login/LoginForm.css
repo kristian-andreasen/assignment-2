@@ -67,3 +67,7 @@ fieldset{
   cursor: pointer;
   position: absolute;
 }
+
+.w-6 {
+  height: 35px;
+}
