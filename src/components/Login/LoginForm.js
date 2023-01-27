@@ -70,8 +70,8 @@ const LoginForm = () => {
       <form onSubmit={handleSubmit(onSubmit)} class="loginForm">
         <fieldset>
           <svg
-            width="50"
-            height="50"
+            width="40"
+            height="40"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
@@ -92,28 +92,26 @@ const LoginForm = () => {
             {...register('username', usernameConfig)}
             class="username-input"
           />
+          <button type="submit" disabled={loading} class="login">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+          </button>
           {/*(errors.username && errors.username.type === 'required') && <span>Username is required</span>*/}
           {/*(errors.username && errors.username.type === 'minLength') && <span>Username is too short (min. 2 characters)</span>*/}
           {errorMessage}
         </fieldset>
-        <button type="submit" disabled={loading} class="login">
-          Continue
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className="w-6 h-6"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-            />
-          </svg>
-        </button>
-
         {loading && <p>logging in...</p>}
         {apiError && <p>{apiError}</p>}
       </form>
